@@ -1,13 +1,17 @@
-<form [formGroup]="loginGroup" (ngSubmit)="onSubmit()">
+<form class="form-wrapper" [formGroup]="loginGroup" (ngSubmit)="onSubmit()">
+  <div class="form-group">
   <label>
     E-Mail:
-    <input type="text" formControlName="email">
+    <input type="email" class="form-control" formControlName="email" required>
   </label>
+  </div>
 
+  <div class="form-group">
   <label>
     Identifier:
-    <input type="text" formControlName="identifier">
+    <input type="password" class="form-control" formControlName="identifier" required>
   </label>
+  </div>
 
-  <button type="submit" [disabled]="!loginGroup.valid">Submit</button>
+  <button type="submit" class="btn btn-primary" [disabled]="!loginGroup.valid">Submit</button>
 </form>

@@ -1,1 +1,25 @@
-<app-home-form-login></app-home-form-login>
+<ng-template #login_form>
+  <div class="form-login">
+    <app-home-form-login></app-home-form-login>
+  </div>
+</ng-template>
+
+<ng-template #register_form>Still in work!</ng-template>
+
+<div class="bg-img"></div>
+<div class="form-wrapper">
+  <div class="header-wrapper">
+    <span (click)="formOptions.isLogin=true;" class="option-link" [class.active]="formOptions.isLogin">Login</span>
+    <span (click)="formOptions.isLogin=false;" class="option-link" [class.active]="!formOptions.isLogin">Register</span>
+  </div>
+
+
+  <div *ngIf="formOptions.isLogin; then login_form else register_form"></div>
+
+  <div class="form-changelog">
+    <app-home-form-changelog></app-home-form-changelog>
+  </div>
+  <p></p>
+</div>
+
+
