@@ -8,13 +8,16 @@ import { HomeComponent } from './components/home/home.component';
 // custom imports
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FormLoginComponent } from './components/home/form-login/form-login.component';
-
+import { FormChangelogComponent } from './components/home/form-changelog/form-changelog.component';
+import { DetailComponent } from './components/detail/detail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     FormLoginComponent,
+    FormChangelogComponent,
+    DetailComponent,
   ],
   imports: [
     BrowserModule,
